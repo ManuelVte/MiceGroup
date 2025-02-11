@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2943155100236935569}
-  - component: {fileID: 510237462260968282}
   - component: {fileID: 6157206519584849504}
   - component: {fileID: 201877655718177135}
+  - component: {fileID: 7112092270508564952}
   m_Layer: 0
   m_Name: BladeTrap
   m_TagString: Untagged
@@ -35,22 +35,6 @@ Transform:
   - {fileID: 7589351624498839325}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &510237462260968282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786622053712559270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa4e8c7f286472a4787aca9c8328440b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blade: {fileID: 7589351624498839325}
-  audioSource: {fileID: 201877655718177135}
-  clip1: {fileID: 8300000, guid: c6765aaa34fb83e449dc8d8e09dc5275, type: 3}
-  clip2: {fileID: 8300000, guid: 58193a8e7a1d3c1448ab3380eb0a7324, type: 3}
 --- !u!65 &6157206519584849504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -169,6 +153,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7112092270508564952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786622053712559270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef95c92479a90343b6d7b9252331953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blade: {fileID: 7589351624498839325}
+  audioSource: {fileID: 201877655718177135}
+  clip1: {fileID: 8300000, guid: c6765aaa34fb83e449dc8d8e09dc5275, type: 3}
+  clip2: {fileID: 8300000, guid: 58193a8e7a1d3c1448ab3380eb0a7324, type: 3}
 --- !u!1 &6090765601524612474
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +291,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1863951177994420, guid: 56ba4d3d8b4cefa43b3711410ea1ecd0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7294365064098472614}
+    - targetCorrespondingSourceObject: {fileID: 1863951177994420, guid: 56ba4d3d8b4cefa43b3711410ea1ecd0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 603328288933974201}
   m_SourcePrefab: {fileID: 100100000, guid: 56ba4d3d8b4cefa43b3711410ea1ecd0, type: 3}
 --- !u!1 &9089819927090900874 stripped
 GameObject:
@@ -318,6 +321,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.87462515, y: 2.9928312, z: 0.059696198}
   m_Center: {x: 0.018055853, y: -1.5247375, z: -0.008652984}
+--- !u!114 &603328288933974201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9089819927090900874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f14e58ca4a8dc45980e5f6b95c1ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9093480757646793204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4944235257259722, guid: 56ba4d3d8b4cefa43b3711410ea1ecd0, type: 3}

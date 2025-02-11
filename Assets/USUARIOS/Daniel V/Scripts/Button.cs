@@ -13,8 +13,8 @@ public class Button : MonoBehaviour
     [Tooltip("The door for remote control")]
     public DoorScript DoorObject;
     [Space]
-    [Tooltip("Any object for ramp/elevator baheviour")]
-    public Transform RampObject;
+    //[Tooltip("Any object for ramp/elevator baheviour")]
+    //public Transform RampObject;
     [Tooltip("Door can be opened")]
     public bool CanOpen = true;
     [Tooltip("Door can be closed")]
@@ -41,9 +41,9 @@ public class Button : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        startYPosition = RampObject.position.y;
+        //startYPosition = RampObject.position.y;
         startQuat = transform.rotation;
-        rampQuat = RampObject.rotation;
+        //rampQuat = RampObject.rotation;
     }
 
     void Update()
@@ -60,7 +60,7 @@ public class Button : MonoBehaviour
                 }
                 else anim.SetTrigger("ButtonPress");
             }
-            else if (isValve && RampObject != null) // 3.valve
+            else if (isValve/* && RampObject != null*/) // 3.valve
             {
                 // changing value in script
                 if (Input.GetKey(KeyCode.E) && NearView())
@@ -92,8 +92,8 @@ public class Button : MonoBehaviour
 
                 // using value on object
                 transform.rotation = startQuat * Quaternion.Euler(0f, 0f, current * ValveSpeed);
-                if (xRotation) RampObject.rotation = rampQuat * Quaternion.Euler(current, 0f, 0f); // I have a doubt in working correctly
-                else if (yPosition) RampObject.position = new Vector3(RampObject.position.x, startYPosition + current, RampObject.position.z);
+                //if (xRotation) RampObject.rotation = rampQuat * Quaternion.Euler(current, 0f, 0f); // I have a doubt in working correctly
+                //else if (yPosition) RampObject.position = new Vector3(RampObject.position.x, startYPosition + current, RampObject.position.z);
             }
         }
     }
